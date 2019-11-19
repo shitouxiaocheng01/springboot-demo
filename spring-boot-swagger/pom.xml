@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>top.xluo</groupId>
-	<artifactId>swaggerdemo</artifactId>
+	<artifactId>spring-boot-swagger</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>swaggerdemo</name>
+	<name>spring-boot-swagger</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
