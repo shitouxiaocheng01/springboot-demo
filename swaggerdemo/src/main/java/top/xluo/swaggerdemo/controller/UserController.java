@@ -43,7 +43,7 @@ public class UserController {
 
     @ApiOperation("根据id更新用户")
     @GetMapping("/updateUserById")
-    public String updateUserById(@ApiParam(value = "用户id", required = true) @RequestParam(value = "id", required = true)String id,
+    public String updateUserById(@ApiParam(value = "用户id", required = true)@RequestParam(value = "id", required = true)String id,
                                  @ApiParam(value = "用户实体", required = true)@RequestBody User user) {
         return "更新成功！";
     }
