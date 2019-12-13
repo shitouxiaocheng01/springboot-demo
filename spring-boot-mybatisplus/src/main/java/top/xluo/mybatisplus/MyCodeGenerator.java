@@ -5,6 +5,8 @@ import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.config.DataSourceConfig;
 import com.baomidou.mybatisplus.generator.config.GlobalConfig;
 import com.baomidou.mybatisplus.generator.config.converts.MySqlTypeConvert;
+import com.baomidou.mybatisplus.generator.config.rules.DbColumnType;
+import com.baomidou.mybatisplus.generator.config.rules.IColumnType;
 
 /**
  * @Author Lingyi
@@ -36,7 +38,19 @@ public class MyCodeGenerator {
                 new DataSourceConfig()
                     .setDbType(DbType.MYSQL)
                     .setTypeConvert(new MySqlTypeConvert() {
+                        @Override
+                        public IColumnType processTypeConvert(GlobalConfig globalConfig, String fieldType) {
+                            System.out.println("转换类型: " + fieldType);
+                            if (fieldType.toLowerCase().contains("double")) {
+                                return DbColumnType.BASE_LONG;
+                            }
+                            return super.processTypeConvert(globalConfig, fieldType);
+                        }
                     })
+                    .setDriverName("com.mysql.jdbc.Driver")
+                    .setUsername("dbAdminC")
+                    .setPassword("Kenuo123")
+                    .setUrl("jdbc:mysql://10.122.81.99:3306/dawn?useUnicode=true&characterEncoding=utf-8&useSSL=false")
         );
     }
 }
