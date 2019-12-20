@@ -76,7 +76,7 @@ public class MyCodeGenerator {
         sc.setInclude(new String[] {"person", "user_role"});    // 需要生成的表
 //        sc.setExclude(new String[] {"test"});    // 排除生成的表
 //        sc.setSuperEntityClass("com.xx.xx.XxEntity");    // 自定义实体父类
-        sc.setSuperEntityColumns(new String[] {"class_id"});   // 自定义公共字段
+//        sc.setSuperEntityColumns(new String[] {"class_id"});   // 自定义公共字段
 //        sc.setSuperMapperClass("com.xx.xx.XxMapper");
 //        sc.setSuperServiceClass("");
 //        sc.setSuperServiceImplClass("");
